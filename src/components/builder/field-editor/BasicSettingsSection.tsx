@@ -1,4 +1,3 @@
-// src/components/builder/field-editor/BasicSettingsSection.tsx
 import {
     Box,
     Chip,

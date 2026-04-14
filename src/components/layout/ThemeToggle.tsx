@@ -1,4 +1,3 @@
-// src/components/layout/ThemeToggle.tsx
 import { IconButton, Tooltip, useTheme } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import DarkModeIcon from "@mui/icons-material/DarkModeRounded";

@@ -1,4 +1,3 @@
-// src/components/layout/LanguageSwitcher.tsx
 import { Box, ButtonBase, Tooltip, Typography } from "@mui/material";
 import TranslateIcon from "@mui/icons-material/Translate";
 import { useI18n } from "@/hooks/useI18n";

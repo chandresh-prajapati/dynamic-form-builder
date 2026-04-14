@@ -1,4 +1,3 @@
-// src/components/common/AppSnackbar.tsx
 import { Alert, Snackbar, useTheme } from "@mui/material";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import ErrorRoundedIcon from "@mui/icons-material/ErrorRounded";

@@ -1,4 +1,3 @@
-// src/components/layout/AppHeader.tsx (updated with new colors)
 import { useState, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {

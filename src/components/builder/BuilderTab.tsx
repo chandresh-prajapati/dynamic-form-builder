@@ -1,4 +1,3 @@
-// src/components/builder/BuilderTab.tsx
 import {
   Box,
   Card,

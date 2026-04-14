@@ -1,4 +1,3 @@
-// src/hooks/useResponsive.ts
 import { useMediaQuery, useTheme } from "@mui/material";
 
 export function useResponsive() {

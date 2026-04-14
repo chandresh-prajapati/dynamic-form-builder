@@ -1,4 +1,3 @@
-// src/components/builder/FieldEditorDrawer.tsx
 import { useMemo } from "react";
 import {
   Box,

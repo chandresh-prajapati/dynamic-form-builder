@@ -1,4 +1,3 @@
-// src/components/common/Logo.tsx (updated with new palette)
 import { Box, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import DynamicFormIcon from "@mui/icons-material/DynamicForm";

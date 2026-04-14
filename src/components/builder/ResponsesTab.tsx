@@ -1,4 +1,3 @@
-// src/components/builder/ResponsesTab.tsx
 import { useState, useMemo, useCallback } from "react";
 import {
   Box,

@@ -1,4 +1,3 @@
-// src/components/builder/DashboardTabs.tsx
 import { SyntheticEvent } from "react";
 import { Box, Tab, Tabs, useTheme, Badge } from "@mui/material";
 import BuildRoundedIcon from "@mui/icons-material/BuildRounded";

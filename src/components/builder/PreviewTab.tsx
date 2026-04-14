@@ -1,4 +1,3 @@
-// src/components/builder/PreviewTab.tsx
 import {
   Box,
   Card,

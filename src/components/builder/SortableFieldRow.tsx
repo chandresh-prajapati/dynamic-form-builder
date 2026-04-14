@@ -1,4 +1,3 @@
-// src/components/builder/SortableFieldRow.tsx
 import { memo, useCallback } from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { sortableTransformToCss } from "@/utils/sortableTransform";

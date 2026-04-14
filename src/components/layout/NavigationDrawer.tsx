@@ -1,4 +1,3 @@
-// src/components/layout/NavigationDrawer.tsx
 import {
   Box,
   Divider,

@@ -1,4 +1,3 @@
-// src/components/builder/field-editor/VisibilitySection.tsx
 import {
     Box,
     FormControl,

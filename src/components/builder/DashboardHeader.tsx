@@ -1,4 +1,3 @@
-// src/components/builder/DashboardHeader.tsx
 import { RefObject } from "react";
 import {
   Box,

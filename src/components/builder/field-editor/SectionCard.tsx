@@ -1,4 +1,3 @@
-// src/components/builder/field-editor/SectionCard.tsx
 import { Box, Collapse, IconButton, Stack, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";

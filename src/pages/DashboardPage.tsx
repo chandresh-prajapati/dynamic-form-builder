@@ -1,4 +1,3 @@
-// src/pages/DashboardPage.tsx
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Box } from "@mui/material";
 import { useFormBuilderStore } from "@/store/formBuilderStore";
@@ -21,25 +20,25 @@ export function DashboardPage() {
   const { t } = useI18n();
 
   // ─── Store ───────────────────────────────────────────
-  const schema      = useFormBuilderStore((s) => s.schema);
-  const setTitle    = useFormBuilderStore((s) => s.setTitle);
+  const schema = useFormBuilderStore((s) => s.schema);
+  const setTitle = useFormBuilderStore((s) => s.setTitle);
   const setDescription = useFormBuilderStore((s) => s.setDescription);
-  const setSchema   = useFormBuilderStore((s) => s.setSchema);
+  const setSchema = useFormBuilderStore((s) => s.setSchema);
   const removeField = useFormBuilderStore((s) => s.removeField);
   const selectField = useFormBuilderStore((s) => s.selectField);
 
   // ─── Local State ─────────────────────────────────────
-  const [tab, setTab]               = useState<TabKey>("builder");
+  const [tab, setTab] = useState<TabKey>("builder");
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [deleteId, setDeleteId]     = useState<string | null>(null);
-  const [snack, setSnack]           = useState<string | null>(null);
-  const [autoSaved, setAutoSaved]   = useState(false);
+  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [snack, setSnack] = useState<string | null>(null);
+  const [autoSaved, setAutoSaved] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const debounceRef  = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // ─── API ─────────────────────────────────────────────
-  const saveMutation   = useSaveFormSchemaMutation();
+  const saveMutation = useSaveFormSchemaMutation();
   const responsesQuery = useFormResponsesQuery(schema.id);
 
   const fieldsSig = useMemo(
@@ -87,7 +86,7 @@ export function DashboardPage() {
         .text()
         .then((txt) => {
           const parsed = parseFormSchemaJson(JSON.parse(txt));
-          parsed.id        = parsed.id || generateFieldId();
+          parsed.id = parsed.id || generateFieldId();
           parsed.updatedAt = new Date().toISOString();
           setSchema(parsed);
           setSnack("Imported");

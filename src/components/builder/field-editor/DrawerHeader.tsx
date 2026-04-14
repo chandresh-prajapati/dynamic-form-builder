@@ -1,4 +1,3 @@
-// src/components/builder/field-editor/DrawerHeader.tsx
 import { Box, Chip, IconButton, Stack, Tooltip, Typography, useTheme } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";

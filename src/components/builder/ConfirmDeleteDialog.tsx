@@ -1,4 +1,3 @@
-// src/components/builder/ConfirmDeleteDialog.tsx
 import {
   Box,
   Button,

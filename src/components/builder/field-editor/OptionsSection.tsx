@@ -1,4 +1,3 @@
-// src/components/builder/field-editor/OptionsSection.tsx
 import { Box, IconButton, Stack, TextField, Tooltip, Typography, useTheme } from "@mui/material";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";

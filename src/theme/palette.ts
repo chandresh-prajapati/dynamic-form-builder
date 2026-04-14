@@ -1,4 +1,3 @@
-// src/theme/palette.ts
 import { PaletteOptions } from "@mui/material";
 
 // ─────────────────────────────────────────────────────

@@ -1,4 +1,3 @@
-// src/components/layout/AppLayout.tsx
 import { Box, Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { AppHeader } from "./AppHeader";

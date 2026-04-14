@@ -1,4 +1,3 @@
-// src/components/builder/field-editor/ValidationSection.tsx
 import {
     Box,
     InputAdornment,

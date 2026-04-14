@@ -1,4 +1,3 @@
-// src/components/layout/UserMenu.tsx
 import { useState, useCallback } from "react";
 import {
   Avatar,

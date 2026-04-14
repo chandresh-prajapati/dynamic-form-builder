@@ -1,4 +1,3 @@
-// src/theme/theme.ts
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import {
     lightPalette,
