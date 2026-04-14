@@ -75,3 +75,6 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 ## 📄 License & Acknowledgments
 
 This project is built and optimized iteratively focusing on scalability, strict typing paradigms, and premium aesthetic implementation. Open to improvements and open-source contribution adaptations!
+
+<img width="1920" height="1505" alt="screencapture-localhost-5173-2026-04-14-11_28_25" src="https://github.com/user-attachments/assets/063c5f0e-039d-4879-a2f8-6d5726b6037b" />
+<img width="1920" height="1505" alt="screencapture-localhost-5173-2026-04-14-11_31_43" src="https://github.com/user-attachments/assets/fdff925e-f93c-464c-8398-4786fe2f991c" />
