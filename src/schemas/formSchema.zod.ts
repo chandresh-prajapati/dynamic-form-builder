@@ -123,7 +123,11 @@ function zodForField(f: FormField): z.ZodTypeAny {
     }
     case "file": {
       if (required) {
-        return z.any().refine((fl) => fl instanceof FileList && fl.length > 0, "File required");
+        return z.any().refine((fl) => {
+          if (typeof FileList !== "undefined" && fl instanceof FileList) return fl.length > 0;
+          if (Array.isArray(fl)) return fl.length > 0;
+          return false;
+        }, "File required");
       }
       return z.any().optional();
     }

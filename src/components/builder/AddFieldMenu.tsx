@@ -5,6 +5,7 @@ import type { FieldType } from "@/types/form";
 import { defaultFieldForType } from "@/schemas/formDefaults";
 import { useFormBuilderStore } from "@/store/formBuilderStore";
 import { useI18n } from "@/hooks/useI18n";
+import { colorTokens } from "@/theme/palette";
 
 const TYPES: FieldType[] = [
   "text",
@@ -36,7 +37,17 @@ export const AddFieldMenu = memo(function AddFieldMenu() {
 
   return (
     <>
-      <Button startIcon={<AddIcon />} variant="contained" onClick={(e) => setAnchor(e.currentTarget)}>
+      <Button sx={{
+        borderRadius: 1,
+        background: colorTokens.gradients.accent,
+        boxShadow: `0 2px 12px ${colorTokens.ocean[500]}35`,
+        "&:hover": {
+          background: colorTokens.gradients.accent,
+          transform: "translateY(-1px)",
+          boxShadow: `0 6px 20px ${colorTokens.ocean[500]}45`,
+        },
+
+      }} startIcon={<AddIcon />} variant="contained" onClick={(e) => setAnchor(e.currentTarget)}>
         {t("addField")}
       </Button>
       <Menu anchorEl={anchor} open={Boolean(anchor)} onClose={close}>

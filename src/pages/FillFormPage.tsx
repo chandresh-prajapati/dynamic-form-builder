@@ -55,7 +55,7 @@ export function FillFormPage() {
   }
 
   return (
-    <Card variant="outlined" sx={{ maxWidth: 640, mx: "auto" }}>
+    <Card variant="outlined">
       <CardContent>
         <Typography variant="h5" gutterBottom>
           {q.data.title}

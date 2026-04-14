@@ -71,11 +71,12 @@ export async function submitFormData(
   data: Record<string, unknown>
 ): Promise<FormSubmissionRecord> {
   await delay();
+  const serializedData = await serializePayload(data);
   const record: FormSubmissionRecord = {
     id: crypto.randomUUID(),
     formId,
     submittedAt: new Date().toISOString(),
-    data: serializePayload(data),
+    data: serializedData,
   };
   const list = readResponses();
   list.unshift(record);
@@ -83,11 +84,29 @@ export async function submitFormData(
   return record;
 }
 
-function serializePayload(data: Record<string, unknown>): Record<string, unknown> {
+function fileToBase64(file: File): Promise<string> {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.readAsDataURL(file);
+  });
+}
+
+async function serializePayload(data: Record<string, unknown>): Promise<Record<string, unknown>> {
   const out: Record<string, unknown> = {};
   for (const [k, v] of Object.entries(data)) {
-    if (v instanceof FileList) {
-      out[k] = Array.from(v).map((f) => ({ name: f.name, size: f.size, type: f.type }));
+    if (v instanceof FileList || (Array.isArray(v) && v.length > 0 && v[0] instanceof File)) {
+      const files = Array.from(v as Iterable<File>);
+      const serialized = await Promise.all(
+        files.map(async (f) => {
+          let previewUrl: string | undefined = undefined;
+          if (f.type.startsWith("image/")) {
+            previewUrl = await fileToBase64(f);
+          }
+          return { name: f.name, size: f.size, type: f.type, previewUrl };
+        })
+      );
+      out[k] = serialized;
     } else {
       out[k] = v;
     }
